@@ -1,12 +1,115 @@
 {
-  "store.home": { 
+  "store.home": {
     "blocks": [
+      "tab-layout#home",
       "rich-text"
     ]
   },
-  "rich-text": { 
-    "props": { 
-      "text": "VTEX Store Framework",
+  "tab-layout#home": {
+    "children": [
+      "tab-list#home",
+      "tab-content#home"
+    ],
+    "props": {
+      "defaultActiveTabId": "home1"
+    }
+  },
+  "tab-list#home": {
+    "children": [
+      "tab-list.item#promocao",
+      "tab-list.item#bahia",
+      "tab-list.item#vitoria",
+      "tab-list.item#flamengo",
+      "tab-list.item#guerreiros",
+      "tab-list.item#campeoes"
+    ]
+  },
+  "tab-list.item#promocao": {
+    "props": {
+      "tabId": "promocao",
+      "label": "Promoção",
+      "defaultActiveTab": true
+    }
+  },
+  "tab-list.item#bahia": {
+    "props": {
+      "tabId": "bahia",
+      "label": "Bahia"
+    }
+  },
+  "tab-list.item#vitoria": {
+    "props": {
+      "tabId": "vitoria",
+      "label": "Vitória"
+    }
+  },
+  "tab-list.item#flamengo": {
+    "props": {
+      "tabId": "flamengo",
+      "label": "Flamengo"
+    }
+  },
+  "tab-list.item#guerreiros": {
+    "props": {
+      "tabId": "guerreiros",
+      "label": "Guerreiros"
+    }
+  },
+  "tab-list.item#campeoes": {
+    "props": {
+      "tabId": "campeoes",
+      "label": "Campeões"
+    }
+  },
+  "tab-content#home": {
+    "children": [
+      "tab-content.item#promocao",
+      "tab-content.item#bahia",
+      "tab-content.item#vitoria",
+      "tab-content.item#flamengo",
+      "tab-content.item#guerreiros",
+      "tab-content.item#campeoes"
+    ]
+  },
+  "tab-content.item#promocao": {
+    "children": [],
+    "props": {
+      "tabId": "promocao"
+    }
+  },
+  "tab-content.item#bahia": {
+    "children": [],
+    "props": {
+      "tabId": "bahia"
+    }
+  },
+  "tab-content.item#vitoria": {
+    "children": [],
+    "props": {
+      "tabId": "vitoria"
+    }
+  },
+  "tab-content.item#flamengo": {
+    "children": [],
+    "props": {
+      "tabId": "flamengo"
+    }
+  },
+  "tab-content.item#guerreiros": {
+    "children": [],
+    "props": {
+      "tabId": "guerreiros"
+    }
+  },
+  "tab-content.item#campeoes": {
+    "children": [],
+    "props": {
+      "tabId": "campeoes"
+    }
+  },
+  "rich-text": {
+    "props": {
+      "text": "Desafio Upmedal2",
       "textAlignment": "CENTER",
       "textPosition": "CENTER",
       "font": "t-heading-1"
