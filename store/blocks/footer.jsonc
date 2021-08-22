@@ -1,26 +1,96 @@
 {
   "footer": {
-    "blocks": ["footer-layout.desktop", "footer-layout.mobile"]
+    "blocks": [
+      "footer-layout.desktop",
+      "footer-layout.mobile"
+    ]
   },
-  "footer-layout.desktop": { 
+  "footer-layout.desktop": {
     "children": [
       "flex-layout.row#footer"
     ]
   },
-  "footer-layout.mobile": { 
+  "footer-layout.mobile": {
     "children": [
       "flex-layout.row#footer"
     ]
   },
-  "flex-layout.row#footer": { 
+  "flex-layout.row#footer": {
     "children": [
-      "image"
+      "tab-layout#tab-footer"
     ]
   },
-  "image": {
+  "tab-layout#tab-footer": {
+    "children": [
+      "tab-list#tab-list-footer",
+      "tab-content#tab-content-footer"
+    ],
     "props": {
-      "width": 100,
-      "src": "https://brand.vtex.com/static/media/VTEX_pink_RGB.751a9fb5.svg"
+      "defaultActiveTabId": "entrar"
+    }
+  },
+  "tab-list#tab-list-footer": {
+    "children": [
+      "tab-list.item#entrar",
+      "tab-list.item#desafios",
+      "tab-list.item#loja",
+      "tab-list.item#suporte"
+    ]
+  },
+  "tab-list.item#entrar": {
+    "props": {
+      "tabId": "entrar",
+      "label": "Entrar"
+    }
+  },
+  "tab-list.item#desafios": {
+    "props": {
+      "tabId": "desafios",
+      "label": "Desafios"
+    }
+  },
+  "tab-list.item#loja": {
+    "props": {
+      "tabId": "loja",
+      "label": "Loja"
+    }
+  },
+  "tab-list.item#suporte": {
+    "props": {
+      "tabId": "suporte",
+      "label": "Suporte"
+    }
+  },
+  "tab-content#tab-content-footer": {
+    "children": [
+      "tab-content.item#entrar",
+      "tab-content.item#desafios",
+      "tab-content.item#loja",
+      "tab-content.item#suporte"
+    ]
+  },
+  "tab-content.item#entrar": {
+    "children": [],
+    "props": {
+      "tabId": "entrar"
+    }
+  },
+  "tab-content.item#desafios": {
+    "children": [],
+    "props": {
+      "tabId": "desafios"
+    }
+  },
+  "tab-content.item#loja": {
+    "children": [],
+    "props": {
+      "tabId": "loja"
+    }
+  },
+  "tab-content.item#suporte": {
+    "children": [],
+    "props": {
+      "tabId": "suporte"
     }
   }
 }

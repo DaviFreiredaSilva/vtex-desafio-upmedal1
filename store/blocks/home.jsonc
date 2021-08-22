@@ -3,7 +3,7 @@
     "blocks": [
       "tab-layout#home",
       "slider-layout#slider-home",
-      "rich-text"
+      "flex-layout.row#row-products"
     ]
   },
   "tab-layout#home": {
@@ -111,7 +111,7 @@
   "slider-layout#slider-home": { //Início do Slider Layout------------------------------
     "props": {
       "fullWidth": false,
-      "autoplay":{
+      "autoplay": {
         "timeout": "2000",
         "stopOnHover": false
       },
@@ -132,14 +132,14 @@
   },
   "image#1": {
     "props": {
-      "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/6iibxhv7jzzdn2749uhoxub2fdjf?response-content-disposition=inline%3B%20filename%3D%22BANNER-WOOD.png%22%3B%20filename%2A%3DUTF-8%27%27BANNER-WOOD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210820%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210820T163024Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=fa949f60c988641dfa430bb6e63d44a4ecfeb03f94b0bca9dfc8b6eeae798c7e",
+      "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/6iibxhv7jzzdn2749uhoxub2fdjf?response-content-disposition=inline%3B%20filename%3D%22BANNER-WOOD.png%22%3B%20filename%2A%3DUTF-8%27%27BANNER-WOOD.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210821%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210821T131233Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ae20980eeec31b29437a5b16ade8ef681e0b4fb3af8fa72232e0410c4aeb0987",
       "maxHeight": "24",
       "alt": "slider1"
     }
   },
   "image#2": {
     "props": {
-      "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/du3k6akoks0u3xe322aypnaaal8e?response-content-disposition=inline%3B%20filename%3D%22W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png%22%3B%20filename%2A%3DUTF-8%27%27W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210820%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210820T163909Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3989a41e1e5fff2a5d2ab23ba43376737a96283be9f7f90d2b4caa7bd3ac0ae9",
+      "src": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/du3k6akoks0u3xe322aypnaaal8e?response-content-disposition=inline%3B%20filename%3D%22W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png%22%3B%20filename%2A%3DUTF-8%27%27W6S9NXIJ40I86DJI17S40123EYNM3J6CNF24M4Y04GGC9TBSXU.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIRHGNFPZAGTZ7SUA%2F20210821%2Fsa-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210821T131310Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=970f7d02f82c544d3b9b8fc98ac1dd719119115e5ef85810815c7aeb632a0cc2",
       "maxHeight": "24",
       "alt": "slider2"
     }
@@ -151,12 +151,53 @@
       "alt": "slider3"
     }
   },
-  "rich-text": {
+  "flex-layout.row#row-products": {
     "props": {
-      "text": "Desafio Upmedal5",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER",
-      "font": "t-heading-1"
+      "colGap": 10
+    },
+    "children": [
+      "info-card#info1",
+      "info-card#info2",
+      "info-card#info3"
+    ]
+  },
+  "info-card#info1": {
+    "props": {
+      "id": "info-card-example",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/1626040649-POST.png",
+      "headline": "Clearance Sale",
+      "callToActionText": "Saiba mais",
+      "callToActionUrl": "/sale/d",
+      "blockClass": "info-card-example",
+      "textAlignment": "center"
+    }
+  },
+  "info-card#info2": {
+    "props": {
+      "id": "info-card-example",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/1609260033-POST%20SEROTONINA.png",
+      "headline": "Clearance Sale",
+      "callToActionText": "Saiba mais",
+      "callToActionUrl": "/sale/d",
+      "blockClass": "info-card-example",
+      "textAlignment": "center"
+    }
+  },
+  "info-card#info3": {
+    "props": {
+      "id": "info-card-example",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "https://maratonavirtual.s3.sa-east-1.amazonaws.com/1609260033-POST%20SEROTONINA.png",
+      "headline": "Clearance Sale",
+      "callToActionText": "Saiba mais",
+      "callToActionUrl": "/sale/d",
+      "blockClass": "info-card-example",
+      "textAlignment": "center"
     }
   }
 }
